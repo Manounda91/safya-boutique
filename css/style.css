@@ -12,15 +12,26 @@ body {
 
 /* 2. LE CADRE DE LA NAVBAR */
 .navbar {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;            
-    padding: 15px 5%;              
-    background-color: #ffffff;      
-    box-shadow:0 10px 30px rgba(0, 0, 0, 0.15);
-    position: sticky;               
-    top: 0;
-    z-index: 1000;
+    display: flex; /* Aligne les éléments sur une ligne */
+    justify-content: space-between; /* Espace égal entre le logo, les liens et le panier */
+    align-items: center; /* Centre tout verticalement */
+    padding: 10px 5%; /* 5% de marge à gauche et à droite pour éviter que ce soit trop large */
+    background-color: #fff; /* Ou ta couleur actuelle */
+    width: 100%; /* S'adapte à la largeur de l'écran */
+    box-sizing: border-box; /* Empêche le padding de faire déborder la barre */
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Espace entre chaque lien du menu */
+    margin: 0;
+    padding: 0;
+}
+
+.cart-icon {
+    position: relative; /* Pour que le chiffre 0 soit bien placé sur l'icône */
+    font-size: 1.2rem;
 }
 
 /* 3. LOGO ET ICONES */
@@ -302,4 +313,16 @@ body {
     font-weight: bold;
     min-width: 15px;
     text-align: center;
+}
+.nav-icons {
+    display: flex; /* Aligne la loupe et le panier sur la même ligne */
+    align-items: center;
+    gap: 20px; /* Espace entre la loupe et le panier */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Pousse le logo à gauche, le menu au centre et les icônes à droite */
+    align-items: center;
+    padding: 10px 5%;
 }
